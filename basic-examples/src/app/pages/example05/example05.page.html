@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <!--Directiva estructural: Cambia la estructura de la pantalla, pone o quita elementos-->
+    <ion-title>Directiva estructural *ngFor</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <h3>Números:</h3>
+  <p *ngFor="let n of numbers"> {{ n }} <!-- Cojo numeros de uno en uno empezamos por n-->
+  </p>
+
+  <h3>Frutas:</h3>
+  <p *ngFor="let f of fruits"> {{ f }} <!-- Cojo numeros de uno en uno empezamos por f-->
+  </p>
+
+</ion-content>

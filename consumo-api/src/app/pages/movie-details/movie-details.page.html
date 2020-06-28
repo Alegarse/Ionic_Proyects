@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{item?.Title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card *ngIf="item">
+    <ion-card-header>
+      <ion-card-title>{{item.Title}}</ion-card-title>
+      <ion-card-subtitle>{{item.Year}}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content text-center>
+      <img *ngIf="item.Poster && item.Poster != 'N/A'"
+      [src]="item.Poster" class="info-img">
+      <p>{{ item.Plot }}</p>
+
+      <!-- AÑADIRLE QUE MUESTRE SI ES PELICULA, SERIE O VIDEOJUEGO MEJOR-->
+      <ion-icon 
+    *ngIf="item.Type == 'movie'" 
+    slot="end" 
+    name="videocam" ></ion-icon>
+    <ion-icon 
+    *ngIf="item.Type == 'series'" 
+    slot="end" 
+    name="tv" ></ion-icon>
+    <ion-icon 
+    *ngIf="item.Type == 'game'" 
+    slot="end" 
+    name="logo-game-controller-b" ></ion-icon>
+
+      
+
+      <ion-item lines="none">
+        <ion-icon name="star-half" slot="start"></ion-icon>
+        <ion-label>{{ item.imdbRating }}</ion-label>
+      </ion-item>
+      <ion-item lines="none">
+          <ion-icon name="clipboard" slot="start"></ion-icon>
+          <ion-label>{{ item.Director }}</ion-label>
+      </ion-item>
+      <ion-item lines="none">
+          <ion-icon name="contact" slot="start"></ion-icon>
+          <ion-label text-wrap>{{ item.Actors }}</ion-label>
+      </ion-item>
+
+      <ion-button 
+      expand="block"
+      (click)="openWebsite()"
+      *ngIf="item.Website && item.Website != 'N/A'"
+      text-center>+ Info</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

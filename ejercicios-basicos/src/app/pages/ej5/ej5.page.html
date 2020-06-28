@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title>Ejercicio 5</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <br>
+  <span>Valor minimo</span>
+  <ion-input [(ngModel)]="min"></ion-input>
+  <span>Valor maximo</span>
+  <ion-input [(ngModel)]="max"></ion-input>
+  <br>
+  <ion-button expand="block" size="large" (click)="generaNum()">Genera número</ion-button>
+  <h1 text-center>{{ num }}</h1>
+  <br>
+</ion-content>
+
+<ion-footer text-center>
+  <ion-title color="primary" size="small">Designed by @Alegarse</ion-title>
+</ion-footer>

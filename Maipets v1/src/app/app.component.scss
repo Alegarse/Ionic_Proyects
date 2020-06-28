@@ -1,0 +1,43 @@
+/* Custom icons
+ion-icon {
+    &[class*=”c-”] {
+        mask-size: contain;
+        mask-position: 50% 50%;
+        mask-repeat: no-repeat;
+        background: currentColor;
+        width: 1em;
+        height: 1em;
+    }
+
+    &[class*=”c-bird”] {
+        mask-image: url(../src/assets/icon/bird.png);
+    }
+
+    &[class*=”c-cat”] {
+        mask-image: url(../src/assets/icon/cat.png);
+    }
+
+    &[class*=”c-dog”] {
+        mask-image: url(../src/assets/icon/dog.png);
+    }
+
+    &[class*=”c-fish”] {
+        mask-image: url(../src/assets/icon/fish.png);
+    }
+
+    &[class*=”c-ham”] {
+        mask-image: url(../src/assets/icon/hamster.png);
+    }
+    
+    &[class*=”c-loro”] {
+        mask-image: url(../src/assets/icon/loro.png);
+    }
+    
+    &[class*=”c-snake”] {
+        mask-image: url(../src/assets/icon/snake.png);
+    }
+    
+    &[class*=”c-turtle”] {
+        mask-image: url(../src/assets/icon/turtle.png);
+    }
+}*/

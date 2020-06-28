@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Interpolación y filtros</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<p>x vale {{ x }}</p> <!-- Esto se llama interpolación -->
+<p>y vale {{ y }}</p>
+<p>x+y vale {{ x + y }}</p>
+<p>word vale {{ word }}</p>
+<p>person vale {{ person | json }}<!--Así se aplica el formato JSON para que lo muestre bien por pantalla--></p>
+<p> Nombre: {{ person.name }}</p>
+<p> Puesto: {{ person.job }}</p>
+<p> Salario: {{ person.salary | currency:'€' }}<!-- Filtro/Tubería para que salga al estilo de monedas. 
+  Algunos permiten meter modificaciones al filtro--> </p>
+</ion-content>

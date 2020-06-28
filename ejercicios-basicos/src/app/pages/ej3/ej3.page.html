@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar  color="tertiary">
+    <ion-title>Ejercicio 3</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <br>
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center size="3">
+        <ion-button (click)="modValue(1)" shape="round" size="large">
+          <ion-icon name="add-circle-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="6"></ion-col>
+      <ion-col text-center size="3">
+        <ion-button (click)="modValue(-1)" shape="round" size="large">
+          <ion-icon name="remove-circle-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h1 text-center>{{ num }}</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" (click)="reset()">RESET</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer text-center>
+  <ion-title color="primary" size="small">Designed by @Alegarse</ion-title>
+</ion-footer>

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title text-wrap>1. Generador aleatorio</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <br>
+    <span>Valor minimo</span>
+    <ion-input [(ngModel)]="min" placeholder="Introduce el mínimo"></ion-input>
+    <span>Valor maximo</span>
+    <ion-input [(ngModel)]="max" placeholder="Introduce el máximo"></ion-input>
+    <br>
+    <h3 *ngIf="min == null || max == null" text-center>Introduce los límites para que se pueda generar el número</h3>
+    <ion-button *ngIf="min <= max" expand="block" size="large" (click)="generaNum()">Genera número</ion-button>
+    <h1 *ngIf="min <= max" text-center (click)="change()">{{ num }}</h1>
+    <p *ngIf="min <= max" text-center color="success">Pulsa en el número generado para cambiarlo al mínimo o máximo de forma alterna</p>
+    <h3 *ngIf="min > max" text-center>{{ mensaje }}</h3>
+    
+    <br>
+  </ion-content>
+  
+  <ion-footer text-center>
+    <ion-title color="primary" size="small">Designed by @Alegarse</ion-title>
+  </ion-footer>

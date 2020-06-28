@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Películas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-searchbar placeholder="Buscar" 
+  [(ngModel)]="searchTerm" 
+  debounce="500" 
+  (ionChange)="searchChanged()">
+  </ion-searchbar>
+
+  <ion-item>
+    <ion-label>Selecciona el tipo</ion-label>
+    <ion-select 
+    [(ngModel)]="type"
+    (ionChange)="searchChanged()">
+      <ion-select-option value="">Todos</ion-select-option>
+      <ion-select-option value="movie">Película</ion-select-option>
+      <ion-select-option value="series">Serie</ion-select-option>
+      <ion-select-option value="episode">Episodio</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <!--[routerLink]="[se parte de raiz / resto de la ruta / parametros]": Compone la url
+   para pasar a la página de detalles-->
+
+  <ion-list>
+    <ion-item 
+    button
+    [routerLink]="['/','movie',item.imdbID]"
+    *ngFor="let item of (results | async)">
+    <ion-avatar 
+     slot="start">
+      <img [src]="item.Poster" *ngIf="item.Poster != 'N/A'">
+    </ion-avatar>
+    <ion-label text-wrap>
+      <h3>{{item.Title}}</h3>
+      {{item.Year}}
+    </ion-label>
+
+    <ion-icon 
+    *ngIf="item.Type == 'movie'" 
+    slot="end" 
+    name="videocam" ></ion-icon>
+    <ion-icon 
+    *ngIf="item.Type == 'series'" 
+    slot="end" 
+    name="tv" ></ion-icon>
+    <ion-icon 
+    *ngIf="item.Type == 'game'" 
+    slot="end" 
+    name="logo-game-controller-b" ></ion-icon>
+  </ion-item>
+  </ion-list>
+
+  <!-- CUANDO HAYA UN OBSERVABLE PONEMOS ASYNC EJ: {{ results | async | JSON }}-->
+
+</ion-content>

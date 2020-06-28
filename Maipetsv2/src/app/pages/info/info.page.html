@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title text-center>Información de la app</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/list"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-img src="https://firebasestorage.googleapis.com/v0/b/maipetsionic.appspot.com/o/imgs%2Flogo.png?alt=media&token=57a34494-4269-4ccb-a590-e3d956efefba"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="2"></ion-col>
+      <ion-col size="8">
+        <ion-img src="https://firebasestorage.googleapis.com/v0/b/maipetsionic.appspot.com/o/imgs%2Fcap.png?alt=media&token=2d70292f-d6fb-4778-b95f-d75b08b44bae"></ion-img>
+      </ion-col>
+      <ion-col size="2"></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-img src="https://firebasestorage.googleapis.com/v0/b/maipetsionic.appspot.com/o/imgs%2Fslogan.png?alt=media&token=08c93bfd-32f4-4269-ac3d-aa38ae4602be"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p>
+          <strong>Aplicación de gestión de mascotas con conexion a Firebase y uso de camara</strong><br/><br/>
+
+        ## Version 2.0<br/>
+        Implementado el uso multiusuario,con registro a través de email en Firebase.<br/>
+        La version actual consiste en un muestrario de las mascotas y sus datos más significativos a través de cards,en las que cada mascota puede tener su propia imagen, o en caso deno existir ninguna, se mostrará una imagen predeterminada.<br/>
+        Incorpora un menú de la aplicación desde el cual se accede al perfil de usuario, a la página de información acerca de la app, y por último, a la posibilidad de hacer logout y salir del perfil de usuario.<br/>
+        Para cada mascota, mostrada en un card independiente, se puede acceder a las opciones de borrado a través de una ventana modal de confirmación.<br/>
+        A la hora de añadir o en la edición de los datos de una mascota, accedemos a una nueva pagina, en la que se distingue entre si es unanueva entrada o estamos actualizano datos, a través de la recpción de el id de dicha mascota en caso de su edición; En el caso de no recibirse, el sistema interpreta que es una nueva.<br/>
+        Creada una página de perfil de usuario, con acceso a la camara, parapoder tomar una fotografía de perfil.<br/>
+        </p>
+      </ion-col>
+    </ion-row>
+    </ion-grid>
+</ion-content>

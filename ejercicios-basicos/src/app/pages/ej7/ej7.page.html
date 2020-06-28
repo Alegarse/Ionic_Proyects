@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Ejercicio 7</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <br>
+    <ion-input [(ngModel)]="pes" (keyup)="cambioPes()" type="number">Pesetas</ion-input>
+    <ion-item-divider></ion-item-divider>
+    <ion-input [(ngModel)]="eur" (keyup)="cambioEur()" type="number">Euros</ion-input>
+    <ion-item-divider></ion-item-divider>
+</ion-content>
+
+<ion-footer text-center>
+  <ion-title color="primary" size="small">Designed by @Alegarse</ion-title>
+</ion-footer>

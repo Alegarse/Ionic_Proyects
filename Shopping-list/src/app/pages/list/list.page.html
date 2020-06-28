@@ -1,0 +1,32 @@
+<ion-header class="title-background">
+  <ion-toolbar>
+    <ion-title class="title">Lista de la compra</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-chip *ngFor="let item of items | async">
+    <ion-avatar>
+      <img [src]="item.imageUrl">
+    </ion-avatar>
+    <ion-label class="text capitalize">{{ item.name}} <strong>{{ item.quantity }}</strong> </ion-label>
+    <ion-icon></ion-icon>
+    <ion-icon (click)="goEditItem(item.itemId)" name="create">
+    </ion-icon>
+    <ion-icon (click)="itemService.deleteItemById(item.itemId)" color="danger" name="close-circle">
+    </ion-icon>
+
+  </ion-chip>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button class="text-capitalize" color="dark" (click)="addItem()" size="large">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+
+  </ion-fab>
+
+</ion-content>

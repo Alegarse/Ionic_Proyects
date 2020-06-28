@@ -1,0 +1,88 @@
+<ion-content padding color="medium">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col text-end>
+        <br>
+        <h1>{{ num }}</h1>
+        <br>
+      </ion-col>
+    </ion-row>
+    <ion-row class="res">
+      <ion-col size="12"></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" color="danger" size="large" (click)="clear()">AC</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="dark" size="large">C</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="dark" size="large">%</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="dark" size="large" (click)="div()">/</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" color="dark" size="large" (click)="intNum(7)">7</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="dark" size="large" (click)="intNum(8)">8</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="dark" size="large" (click)="intNum(9)">9</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="dark" size="large" (click)="mult()">*</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" color="dark" size="large" (click)="intNum(4)">4</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="dark" size="large" (click)="intNum(5)">5</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="dark" size="large" (click)="intNum(6)">6</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="dark" size="large" (click)="resta()">-</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" color="dark" size="large" (click)="intNum(1)">1</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="dark" size="large" (click)="intNum(2)">2</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="dark" size="large" (click)="intNum(3)">3</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="dark" size="large" (click)="suma()">+</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" color="dark" size="large">+/-</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="dark" size="large" (click)="intNum(0)">0</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="dark" size="large">.</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="success" size="large">=</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="res">
+      <ion-col size="12"></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

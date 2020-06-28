@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Tareas
+    </ion-title>
+    <ion-buttons slot="end" padding>
+      <ion-button (click)="goEditTask()">
+        <ion-icon size="large" slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-list lines="full">
+      <ion-item *ngFor="let t of tasks">
+        <ion-icon
+        slot="start" 
+        name="star" 
+        color="warning">
+      </ion-icon>
+        <ion-label id="label">{{ t.title }}</ion-label>
+        <ion-icon (click)="goEditTask(t.id)" name="create" color="success">
+        </ion-icon>
+        <ion-icon name="blank"></ion-icon>
+        <ion-icon (click)="presentAlertConfirm(t.id, t.title)" name="trash" color="danger">
+        </ion-icon>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

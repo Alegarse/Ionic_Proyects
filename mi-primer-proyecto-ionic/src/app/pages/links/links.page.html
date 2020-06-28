@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Barras de progreso</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item color="light">
+    <ion-label color="primary">
+      Normal
+    </ion-label>
+  </ion-item>
+
+  <ion-progress-bar color="danger"></ion-progress-bar><br>
+
+  <ion-item color="light">
+    <ion-label color="primary">
+      Al 50 %
+    </ion-label>
+  </ion-item>
+  <ion-progress-bar value="0.5"></ion-progress-bar><br><br>
+
+  <ion-item color="light">
+      <ion-label color="primary">
+        Colores
+      </ion-label>
+    </ion-item>
+  <ion-progress-bar color="primary" value="0.05"></ion-progress-bar>
+  <ion-progress-bar color="secondary" value="0.1"></ion-progress-bar>
+  <ion-progress-bar color="tertiary" value="0.15"></ion-progress-bar>
+  <ion-progress-bar color="success" value="0.2"></ion-progress-bar>
+  <ion-progress-bar color="warning" value="0.25"></ion-progress-bar>
+  <ion-progress-bar color="danger" value="0.3"></ion-progress-bar>
+  <ion-progress-bar color="medium" value="0.4"></ion-progress-bar>
+  <ion-progress-bar color="dark" value="0.5"></ion-progress-bar><br><br>
+
+  <ion-item color="light">
+      <ion-label color="primary">
+        Animadas:
+      </ion-label>
+    </ion-item>
+  <!-- Other types -->
+  <ion-progress-bar value="0.4" buffer="0.6" color="dark"></ion-progress-bar>
+  <ion-progress-bar type="indeterminate" color="danger"></ion-progress-bar>
+  <ion-progress-bar type="indeterminate" reversed="true" color="warning"></ion-progress-bar>
+
+
+
+</ion-content>

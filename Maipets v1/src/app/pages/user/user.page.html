@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Mascotas</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end" padding>
+      <ion-button (click)="goEditMasc()">
+        <ion-icon size="large" slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body" padding>
+  <div>
+    <!--
+    <ion-item *ngFor="let m of mascotas">
+      <ion-label id="nombre">{{ m.nombre }}</ion-label>
+      <ion-icon (click)="goEditMasc(m.id)" name="create" color="primary">
+      </ion-icon>
+      <ion-icon name="blank"></ion-icon>
+      <ion-icon (click)="presentAlertConfirm(m.id, m.nombre)" name="trash" color="danger">
+      </ion-icon>
+    </ion-item>
+    -->
+    <ion-card *ngFor="let m of mascotas" color="light">
+      <ion-card-header>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="2">
+                <ion-img *ngIf="m.especie == 'pajaro'" src="assets/icon/bird.png"></ion-img>
+                <ion-img *ngIf="m.especie == 'gato'" src="assets/icon/cat.png"></ion-img>
+                <ion-img *ngIf="m.especie == 'perro'" src="assets/icon/dog.png"></ion-img>
+                <ion-img *ngIf="m.especie == 'pez'" src="assets/icon/fish.png"></ion-img>
+                <ion-img *ngIf="m.especie == 'hamster'" src="assets/icon/hamster.png"></ion-img>
+                <ion-img *ngIf="m.especie == 'loro'" src="assets/icon/loro.png"></ion-img>
+                <ion-img *ngIf="m.especie == 'serpiente'" src="assets/icon/serpiente.png"></ion-img>
+                <ion-img *ngIf="m.especie == 'tortuga'" src="assets/icon/turtle.png"></ion-img>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+            <ion-col>
+              <ion-row>
+                <ion-col size="6">
+                  <ion-card-title class="nombre">{{m.nombre}}</ion-card-title>
+                </ion-col>
+                <ion-col size="6">
+                  <ion-icon (click)="goEditMasc(m.id)" name="create" color="success" size="large">
+                  </ion-icon>
+                  <ion-icon name="blank"></ion-icon>
+                  <ion-icon (click)="presentAlertConfirm(m.id, m.nombre)" name="trash" color="danger" size="large">
+                  </ion-icon>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+
+        </ion-grid>
+      </ion-card-header>
+      <ion-card-content text-center>
+        Es un {{m.especie}} de raza {{m.raza}}, color {{m.color}}
+        <ion-card-subtitle text-center>Fecha de nacimiento: {{m.fechaN}}</ion-card-subtitle>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+</ion-content>

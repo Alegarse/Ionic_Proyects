@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Entrada de datos con input</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Entrada de texto: Input. Loque meta aquí, este word tendrá ese valor-->
+  <ion-input 
+    placeholder="Introduzca datos" 
+    [(ngModel)]="word">
+  </ion-input>
+  <!-- Botón para limpiar-->
+  <ion-button (click)="reset()">Borrar</ion-button>
+
+  <h2>{{ word | uppercase}}</h2><!-- Le pasamos de filtro a word que lo ponga en mayusculas. Hay muchos más-->
+
+</ion-content>

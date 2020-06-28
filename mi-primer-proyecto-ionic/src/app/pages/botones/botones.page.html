@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Clases de botones</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-item color="light">
+    <ion-label color="primary">
+      Tamaños:
+    </ion-label>
+  </ion-item>
+  <ion-button size="small" color="danger">Pequeño</ion-button>
+  <ion-button color="warning">Normal</ion-button>
+  <ion-button size="large" color="danger">Grande</ion-button><br><br>
+
+
+  <ion-item color="light">
+    <ion-label color="primary">
+      Según sus colores:
+    </ion-label>
+  </ion-item>
+  <ion-button color="primary">Azul</ion-button>
+  <ion-button color="secondary">Turquesa</ion-button>
+  <ion-button color="tertiary">Morado</ion-button><br>
+  <ion-button color="success">Verde</ion-button>
+  <ion-button color="warning">Amarillo</ion-button>
+  <ion-button color="danger">Rojo</ion-button><br>
+  <ion-button color="light">Gris claro</ion-button>
+  <ion-button color="medium">Gris oscuro</ion-button>
+  <ion-button color="dark">Negro</ion-button><br><br>
+
+  <ion-item color="light">
+    <ion-label color="primary">
+      Según su anchura:
+    </ion-label>
+  </ion-item>
+  <ion-button expand="full">Completo</ion-button>
+  <ion-button expand="full" fill="outline">Completo con borde</ion-button>
+  <ion-button expand="block">Bloque</ion-button>
+  <ion-button expand="block" fill="outline">Bloque con borde</ion-button>
+  <ion-button shape="round">Redondeado</ion-button>
+  <ion-button shape="round" fill="outline">Redondeado con borde</ion-button><br><br>
+
+
+  <ion-item color="light">
+    <ion-label color="primary">
+      Con iconos:
+    </ion-label>
+  </ion-item>
+  <ion-button>
+    <ion-icon slot="start" name="star" color="danger"></ion-icon>
+    izquierda
+  </ion-button>
+  <ion-button>
+    <ion-icon slot="icon-only" size="small" name="star" color="warning"></ion-icon>
+  </ion-button>
+  <ion-button>
+    <ion-icon slot="end" name="star" color="danger"></ion-icon>
+    derecha
+  </ion-button>
+
+</ion-content>

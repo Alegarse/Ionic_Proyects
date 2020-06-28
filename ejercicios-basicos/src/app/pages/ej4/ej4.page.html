@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>Ejercicio 4</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <br>
+  <ion-label>Nombre</ion-label>
+  <ion-input [(ngModel)]="name">
+  </ion-input>
+  <ion-button expand="block" size="large" (click)="saludar()">Saluda</ion-button>
+  <br>
+  <h3 text-center>{{ saludo }}</h3>
+</ion-content>
+
+<ion-footer text-center>
+  <ion-title color="primary" size="small">Designed by @Alegarse</ion-title>
+</ion-footer>

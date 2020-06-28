@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Directiva *ngIf</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+    <ion-button expand="block" (click)="generateValue()">Genera valor</ion-button><br>
+    <ion-button (click)="incValue(1)"><ion-icon name="add-circle"></ion-icon></ion-button>
+    <ion-button (click)="incValue(10)"><ion-icon name="add-circle"></ion-icon>10</ion-button>
+    <ion-button (click)="incValue(-1)"><ion-icon name="remove-circle"></ion-icon></ion-button>
+    <ion-button (click)="incValue(-10)"><ion-icon name="remove-circle"></ion-icon>10</ion-button>
+    <ion-item-divider></ion-item-divider>
+    <h1>{{ n }}º</h1>
+
+    <p *ngIf="n > 40">Que calor hace!!
+      <img src="https://services.meteored.com/img/article/otra-ola-de-calor-en-europa-de-records-en-julio-2019-199621-1.jpg">
+    </p>
+    <p *ngIf="n < 0">Que frio hace!!
+      <img src="https://i.pinimg.com/originals/2d/d3/ef/2dd3ef28db3c4883ca3d033b2058a412.gif">
+    </p>
+
+</ion-content>

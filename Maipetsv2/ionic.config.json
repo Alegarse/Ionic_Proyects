@@ -1,0 +1,8 @@
+{
+  "name": "Maipets",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "maipets",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

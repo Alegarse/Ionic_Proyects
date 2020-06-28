@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>*ngFor y ngModel</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <h4><strong>Números:</strong>
+    <span *ngFor="let n of numbers">
+      {{ n }}
+    </span>
+  </h4>
+  <!-- con keyup indicamos que cuando se suelte la tecla haga lo que deba hacer. Aqui indicamos que sea la tecla intro-->
+  <!-- Tambien llamamos a la función reset para que no se quede el valor escrito-->
+  <ion-input placeholder="Introduzce un numero para agregarlo y pulse intro" [(ngModel)]="num" type="number"
+    (keyup.enter)="inputNum(num)" (keyup.enter)="reset()"></ion-input>
+
+  <!--Para que salga un boton para meter los datos:
+    <ion-button expand="block" (click)="inputNum(num)" (click)="reset()">Meter numero</ion-button><br>
+    -->
+
+  <h4><strong>Frutas:</strong>
+    <span *ngFor="let f of fruits">
+      {{ f }}
+    </span></h4>
+    <ion-input placeholder="Introduzce una fruta para agregarla y pulse intro" [(ngModel)]="frut" type="string"
+      (keyup.enter)="inputFrut(frut)" (keyup.enter)="reset()"></ion-input>
+  
+
+
+</ion-content>

@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ajustes</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item color="light">
+    <ion-label color="primary">
+      Ajustes de Volumen:
+    </ion-label>
+  </ion-item>
+  <ion-list>
+    <ion-item color="">Llamadas
+      <ion-range color="secondary" pin="true" min="0" max="100" value="50"></ion-range>
+    </ion-item>
+    <ion-item color="">Mensajes
+      <ion-range color="secondary" pin="true" min="0" max="100" value="40"></ion-range>
+    </ion-item><br>
+
+    <ion-item color="light">
+      <ion-label color="primary">
+        Ajustes de Pantalla:
+      </ion-label>
+    </ion-item>
+
+    <ion-item>Brillo
+      <ion-range min="20" max="80" step="2" value="45" color="secondary">
+        <ion-icon size="small" slot="start" name="sunny"></ion-icon>
+        <ion-icon slot="end" name="sunny"></ion-icon>
+      </ion-range>
+    </ion-item>
+
+    <ion-item>Contraste
+      <ion-range min="-100" max="100" step="100" snaps="true" color="secondary" value="0"></ion-range>
+    </ion-item>
+
+    <ion-item>Tamaño texto
+      <ion-range min="0" max="25" step="3" snaps="true" value="12" color="secondary">
+        <ion-icon size="small" color="primary" slot="start" name="at"></ion-icon>
+        <ion-icon slot="end" color="primary" name="at"></ion-icon>
+      </ion-range>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

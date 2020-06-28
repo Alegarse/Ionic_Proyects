@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>4. Carrito Ampliado</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row id="cabecera">
+      <ion-col align-self-center>Nombre Producto</ion-col>
+      <ion-col align-self-center>Precio Unitario</ion-col>
+      <ion-col align-self-center>Cantidad</ion-col>
+      <ion-col align-self-center>Subtotal</ion-col>
+    </ion-row>
+    <br>
+    <ion-row *ngFor="let art of Carta">
+      <ion-col align-self-center>{{ art.item }}</ion-col>
+      <ion-col align-self-center>{{ art.price | currency}}</ion-col>
+      <ion-col align-self-center>{{ art.quantity }}</ion-col>
+      <ion-col align-self-center>{{ art.price * art.quantity | currency }}</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-item-divider></ion-item-divider>
+  <ion-grid>
+    <ion-row class="border head">
+      <ion-col size="3">
+        <ion-input placeholder="Item" [(ngModel)]="item"></ion-input>
+      </ion-col>
+      <ion-col size="3">
+        <ion-input type="number" placeholder="Price" [(ngModel)]="price">
+        </ion-input>
+      </ion-col>
+      <ion-col size="3">
+        <ion-input type="number" placeholder="Quantity" [(ngModel)]="quantity">
+        </ion-input>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button size="small" color="primary" expand="full" (click)="addItem(item, price, quantity)">
+          +
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-item-divider></ion-item-divider><br>
+  <ion-grid>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>Total: {{ total | currency }}</ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

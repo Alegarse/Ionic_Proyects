@@ -1,0 +1,78 @@
+<ion-content color="medium">
+  <ion-grid>
+    <ion-row class="pantalla"><ion-col size="large" text="end">{{ numAnt }}</ion-col></ion-row>
+  </ion-grid>
+  <ion-item-divider expand="block"></ion-item-divider>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button shape="round" expand="full" size="large" color="dark" (click)="reset()">AC</ion-button>
+      </ion-col>
+      <ion-col>
+          <ion-button shape="round" expand="full" size="large" color="danger" (click)="clear()">C</ion-button>
+      </ion-col>
+      <ion-col>
+          <ion-button shape="round" expand="full" size="large"(click)="oper('%')">%</ion-button>
+      </ion-col>
+      <ion-col>
+          <ion-button shape="round" expand="full" size="large" (click)="oper('/')">/</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+          <ion-button shape="round" expand="full" size="large" (click)="numero(7)">7</ion-button>
+        </ion-col>
+        <ion-col>
+            <ion-button shape="round" expand="full" size="large" (click)="numero(8)">8</ion-button>
+        </ion-col>
+        <ion-col>
+            <ion-button shape="round" expand="full" size="large" (click)="numero(9)">9</ion-button>
+        </ion-col>
+        <ion-col>
+            <ion-button shape="round" expand="full" size="large" (click)="oper('*')">x</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+            <ion-button shape="round" expand="full" size="large" (click)="numero(4)">4</ion-button>
+          </ion-col>
+          <ion-col>
+              <ion-button shape="round" expand="full" size="large" (click)="numero(5)">5</ion-button>
+          </ion-col>
+          <ion-col>
+              <ion-button shape="round" expand="full" size="large" (click)="numero(6)">6</ion-button>
+          </ion-col>
+          <ion-col>
+              <ion-button shape="round" expand="full" size="large" (click)="oper('-')">-</ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+              <ion-button shape="round" expand="full" size="large" (click)="numero(1)">1</ion-button>
+            </ion-col>
+            <ion-col>
+                <ion-button shape="round" expand="full" size="large" (click)="numero(2)">2</ion-button>
+            </ion-col>
+            <ion-col>
+                <ion-button shape="round" expand="full" size="large" (click)="numero(3)">3</ion-button>
+            </ion-col>
+            <ion-col>
+                <ion-button shape="round" expand="full" size="large" (click)="oper('+')">+</ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col>
+                <ion-button shape="round" expand="full" size="large" (click)="cambiaSigno()">+/-</ion-button>
+              </ion-col>
+              <ion-col>
+                  <ion-button shape="round" expand="full" size="large" (click)="numero(0)">0</ion-button>
+              </ion-col>
+              <ion-col>
+                  <ion-button shape="round" expand="full" size="large" (click)="decimal()">.</ion-button>
+              </ion-col>
+              <ion-col>
+                  <ion-button shape="round" expand="full" size="large" color="success" (click)="resultado()">=</ion-button>
+              </ion-col>
+            </ion-row>
+  </ion-grid>
+</ion-content>

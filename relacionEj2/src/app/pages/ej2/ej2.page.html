@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>2.Conversor unidades</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <br>
+  <ion-card>
+    <ion-card-header>
+      <ion-input [(ngModel)]="met" (keyup)="cambioMet()" type="number">Metros:</ion-input>
+    </ion-card-header>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-input [(ngModel)]="cent" (keyup)="cambioCent()" type="number">Centímetros:</ion-input>
+    </ion-card-header>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-input [(ngModel)]="pulg" (keyup)="cambioPulg()" type="number">Pulgadas:</ion-input>
+    </ion-card-header>
+  </ion-card>
+
+
+</ion-content>

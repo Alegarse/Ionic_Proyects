@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="title">Nuevo usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        <ion-icon name="person-add" class="person"></ion-icon>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col text-center>Correo electrónico</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-item>
+        <ion-input class="text" [(ngModel)]="email" text-center clearInput></ion-input>
+      </ion-item>
+    </ion-row>
+
+    <ion-row>
+      <ion-col text-center>Contraseña</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-item>
+        <ion-input class="text" [(ngModel)]="password" type="password" text-center clearInput></ion-input>
+      </ion-item>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button color="success" shape="round" expand="block" class="text capitalize" (click)="createUser()">Aceptar</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="danger" shape="round" expand="block"  class="text capitalize" href="/login">Cancelar</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  
+  
+  <br>
+
+
+</ion-content>
